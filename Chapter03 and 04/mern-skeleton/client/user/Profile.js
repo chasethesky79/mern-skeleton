@@ -28,7 +28,6 @@ export default function Profile({ match }){
         const signal = abortController.signal;
         const jwt = auth.isAuthenticated();
         const data = await read({ userId }, { t: jwt.token }, signal);
-        console.log(`RESULT ${JSON.stringify(data)}`);
         if (data?.error) {
            setRedirectToSignIn(true);
         } else {
