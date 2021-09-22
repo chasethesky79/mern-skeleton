@@ -1,4 +1,6 @@
-import { ListItem, ListItemText, Divider, List, Paper, ListItemAvatar, Avatar, Person, Typography, ListItemSecondaryAction, IconButton, Edit } from "@material-ui/core";
+import { ListItem, ListItemText, Divider, List, Paper, ListItemAvatar, Avatar, Typography, ListItemSecondaryAction, IconButton } from "@material-ui/core";
+import Person from '@material-ui/icons/Person';
+import Edit from '@material-ui/icons/Edit';
 import { makeStyles } from '@material-ui/core/styles'
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
@@ -46,9 +48,9 @@ export default function Profile({ match }){
             <List dense>
                 <ListItem>
                     <ListItemAvatar>
-                        {/* <Avatar>
+                        <Avatar>
                           <Person/>
-                        </Avatar> */}
+                        </Avatar>
                     </ListItemAvatar>
                     <ListItemText primary={user.name} secondary={user.email}/>
                         { auth.isAuthenticated().user && auth.isAuthenticated().user._id === user._id && (
