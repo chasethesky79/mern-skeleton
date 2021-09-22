@@ -43,7 +43,6 @@ const useStyles = makeStyles(theme => ({
       redirectToReferrer: false
     });
     const { redirectToReferrer } = values;
-    console.log(`STATE AND FROM ${JSON.stringify(state)}, ${JSON.stringify(from)}, ${redirectToReferrer}`);
     const handleChange = name => event => {
         const { target: { value }} = event;
         setValues({...values, [name]: value });
@@ -65,7 +64,6 @@ const useStyles = makeStyles(theme => ({
     if (redirectToReferrer) {
         return <Redirect to={from}/>
     }
-    console.log(`AFTER REDIRECTOREFERRER ${redirectToReferrer}`);
     return (
         <div>
             <Card className={classes.card}>
